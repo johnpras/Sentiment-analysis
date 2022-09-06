@@ -1,3 +1,3 @@
 # Sentiment-analysis
 
-Trained on tweets with given sentiment
+ML model trained on tweets with given sentiment
