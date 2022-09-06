@@ -1,10 +1,8 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-#pip install -U scikit-learn
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
-## for saving the model and vectorizer
 import joblib
 import pickle
 import re
@@ -85,12 +83,9 @@ results = classifier.predict(X_new)
 print(results)
 results = results.tolist()
 
-
 results_sum = sum(results)
 sentiment_score=""
 sntscr = results_sum/len(results)
-
-    
 
 if ((sntscr > 0.5) and (sntscr <0.75)):
     print("The average sentiment score of the text is: ","%.2f" %sntscr, ", Slightly Positive")
@@ -107,6 +102,3 @@ elif (sntscr == 0.5):
 else:
     print("The average sentiment score of the text is: ","%.2f" %sntscr, ", Negative")
     sentiment_score = "Negative"
-
-
-#https://www.aiperspectives.com/twitter-sentiment-analysis/
